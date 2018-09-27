@@ -13,6 +13,7 @@ public class FormularioActivity extends AppCompatActivity {
     private RadioButton rbConvenio, rbNaoConvenio;
     private Button btnSalvar, btnVoltar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +24,20 @@ public class FormularioActivity extends AppCompatActivity {
      etTelefoneCadastro= (EditText) findViewById(R.id.etIdadeCadastro);
      etCPFCadastro = (EditText) findViewById(R.id.etCPFCadastro);
 
+     rbConvenio = (RadioButton)findViewById(R.id.rbConvenio);
+     rbNaoConvenio = (RadioButton)findViewById(R.id.rbNaoConvenio);
 
+     btnSalvar = (Button)findViewById(R.id.btnSalvarFormulario);
+     btnVoltar = (Button)findViewById(R.id.btnVoltarFormulario);
 
 
     }
+
+    private void cadastrarUsuario(){
+        String nome = etNomeCadastro.getText().toString();
+        String idade = etIdadeCadastro.getText().toString();
+        String telefone = etTelefoneCadastro.getText().toString();
+        String cpf = etCPFCadastro.getText().toString();
+    }
+
 }
